@@ -196,7 +196,6 @@ local function get_current_suggestion(ctx)
   local ok, choice = pcall(function()
     if
       not vim.fn.mode():match("^[iR]")
-      or vim.fn.pumvisible() == 1
       or vim.b.copilot_suggestion_hidden
       or not ctx.suggestions
       or #ctx.suggestions == 0
